@@ -1,21 +1,34 @@
 import Reveal from "./Reveal.jsx";
+import { isVideoFile } from "../utils/media.js";
 
 export default function ProjectCard({ project, index, onOpen }) {
   const idx = String(index + 1).padStart(2, "0");
+  const isVideo = isVideoFile(project.media);
 
   return (
     <Reveal as="button" className="project-tile" onClick={onOpen}>
       <span className="project-tile-index">{idx}</span>
 
-      {project.image ? (
-        <img
-          src={project.image}
-          alt={project.title}
-          className="project-tile-img"
-        />
+      {project.media ? (
+        isVideo ? (
+          <video
+            className="project-tile-img"
+            src={project.media}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        ) : (
+          <img
+            src={project.media}
+            alt={project.title}
+            className="project-tile-img"
+          />
+        )
       ) : (
         <div className="project-tile-placeholder">
-          Thêm ảnh trong projects.js
+          Add image/gif/video in projects.js
         </div>
       )}
 

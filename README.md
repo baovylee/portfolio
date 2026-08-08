@@ -23,16 +23,6 @@ The production build will be generated in the `dist/` directory.
 
 This project uses `HashRouter` (URLs such as `your-domain.com/#/projects`), so **no additional redirect or rewrite configuration is required** when deploying to Vercel, Netlify, or GitHub Pages. Simply deploy the `dist/` directory, and the application will work correctly, including when users refresh the `/projects` page.
 
-## Where to Edit Content
-
-| What you want to change                                     | File                                            |
-| ----------------------------------------------------------- | ----------------------------------------------- |
-| Profile image, name, role, bio, LinkedIn/GitHub/Email links | `src/data/profile.js`                           |
-| Project descriptions, tech stack, images, and links         | `src/data/projects.js`                          |
-| Homepage layout                                             | `src/pages/Home.jsx`                            |
-| Projects page layout                                        | `src/pages/ProjectsPage.jsx`                    |
-| Colors and fonts                                            | `index.css` (`:root` and `[data-theme="dark"]`) |
-
 For images (profile picture and project screenshots), place the image files in the `public/` directory, then reference them using paths such as `/filename.png` in `profile.js` or `projects.js`.
 
 ## Project Structure
