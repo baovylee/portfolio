@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { isVideoFile } from "../utils/media.js";
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -13,7 +14,8 @@ export default function ProjectModal({ project, onClose }) {
     };
   }, [onClose]);
 
-  const techLoop = [...project.techStack, ...project.techStack]; // 
+  const techLoop = [...project.techStack, ...project.techStack];
+  const isVideo = isVideoFile(project.media);
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -23,11 +25,22 @@ export default function ProjectModal({ project, onClose }) {
         </button>
 
         <div className="modal-image">
-          {project.image ? (
-            <img src={project.image} alt={project.title} />
+          {project.media ? (
+            isVideo ? (
+              <video
+                src={project.media}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+              />
+            ) : (
+              <img src={project.media} alt={project.title} />
+            )
           ) : (
             <div className="project-image-placeholder">
-              Add screenshot trong projects.js
+              Add image/gif/video in projects.js
             </div>
           )}
         </div>
@@ -39,9 +52,15 @@ export default function ProjectModal({ project, onClose }) {
           <div className="marquee">
             <div className="marquee-track">
               {techLoop.map((tech, i) => (
-                <span className="tech-pill" key={i}>
-                  {tech}
-                </span>
+                <div className="tech-icon" title={tech.name} key={i}>
+                  {tech.icon ? (
+                    <img src={tech.icon} alt={tech.name} />
+                  ) : (
+                    <span className="tech-icon-fallback">
+                      {tech.name.slice(0, 2)}
+                    </span>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -55,13 +74,14 @@ export default function ProjectModal({ project, onClose }) {
             >
               GitHub →
             </a>
+
             <a
               className="modal-link app"
               href={project.appLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-               App →
+              App →
             </a>
           </div>
         </div>
