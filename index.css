@@ -319,15 +319,21 @@ video.project-tile-img{background:#000;}
   -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 .marquee-track{
-  display:flex; gap:12px; width:max-content;
-  animation: scroll 18s linear infinite;
+  display:flex; gap:28px; width:max-content;
+  animation: scroll 9s linear infinite;
 }
 .marquee:hover .marquee-track{animation-play-state:paused;}
 .tech-icon{
-  width:52px; height:52px; flex-shrink:0; border-radius:14px;
+  width:84px; height:84px; flex-shrink:0; border-radius:20px;
   background:var(--surface); border:1px solid var(--border);
-  display:flex; align-items:center; justify-content:center; padding:9px;
+  display:flex; align-items:center; justify-content:center; padding:16px;
   transition:transform 0.25s;
+}
+.tech-icon--plain {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 6px;
 }
 .tech-icon:hover{transform:translateY(-3px);}
 .tech-icon img{width:100%; height:100%; object-fit:contain;}

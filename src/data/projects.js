@@ -71,6 +71,6 @@ export const projectsData = [
     ],
     media: "/favicon.svg",
     githubLink: "https://github.com/baovylee/portfolio",
-    appLink: "https://baovylee.github.io/portfolio/",
+    appLink: "https://portfolio-vy-le.vercel.app/",
   }
 ];
