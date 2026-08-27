@@ -1,8 +1,32 @@
 export const projectsData = [
+
   {
-    title: "BIOMEX",
+    title: "AI Lecture Support",
     description:
-      "Bit Clicks is a web app for researchers and clinicians that visualizes biomedical OMICS data. Users upload their raw data, select visualization parameters and download their dynamically generated plots..",
+      "A full-stack study app that lets users upload lecture PDFs, view them as a real slide deck, get AI-generated summaries and review questions, and chat with an AI about the document's content. I made this app for myself to help me study more effectively and efficiently when I'm a 3rd student and have a lot of lecture slides to go through.",
+    techStack: [
+      { name: "Tech 1", icon: "/react.webp" },
+      { name: "Tech 2", icon: "/css.webp" },
+      { name: "Tech 3", icon: "/reactrouter.webp" },
+      { name: "Tech 4", icon: "/html.webp" },
+      { name: "Tech 5", icon: "/js.webp" },
+      { name: "Tech 6", icon: "/Node.js_logo.svg.webp" },
+      { name: "Tech 7", icon: "/jwt.webp" },
+      { name: "Tech 8", icon: "/aws.png" },
+      { name: "Tech 9", icon: "/anthropic.webp" },
+      { name: "Tech 10", icon: "/awsS3.png" },
+      { name: "Tech 11", icon: "/postgresql.webp" },
+
+    ],
+    media: "/ailecturesupport.gif",
+    githubLink: "https://github.com/baovylee/ai-lecture-support",
+    appLink: "https://lecture-summarize.onrender.com/",
+  },
+
+  {
+    title: "Bit Clicks - Biomedical OMICS Data Visualization",
+    description:
+      "Bit Clicks is an online application that shows biological OMICS data for researchers and physicians. Users receive their dynamically generated plots after uploading their raw data and choosing the visualization parameters. I contributed to the project as a Junior Developer and worked with a team of developers to implement new features and improve the user experience.",
     techStack: [
       { name: "Tech 1", icon: "/cicd.png" },
       { name: "Tech 2", icon: "/docker.webp" },
@@ -17,7 +41,7 @@ export const projectsData = [
   {
     title: "Toronto and Vancouver Crime Analysis",
     description:
-      "Toronto and Vancouver Crime Analysis is a project that analyzes crime data in two major Canadian cities. It provides insights into crime trends, hotspots, and patterns to help inform policy decisions..",
+      "Toronto and Vancouver Crime Analysis is a project that analyzes crime data in two major Canadian cities. It provides insights into crime trends, hotspots, and patterns to help inform policy decisions. I make this project to practice my data analysis and visualization skills using Python and its libraries.",
     techStack: [
       { name: "Tech 1", icon: "/python.webp" },
       { name: "Tech 2", icon: "/pandas.png" },
@@ -36,7 +60,7 @@ export const projectsData = [
   {
     title: "FocusOS - Time Management",
     description:
-      "A full-stack productivity app that helps users manage tasks, track focus sessions with the Pomodoro technique, and gain AI-powered productivity insights..",
+      "A full-stack productivity app that helps users manage tasks, track focus sessions with the Pomodoro technique, and gain AI-powered productivity insights. I built this app to manage my time when I was at university and had a lot of assignments and exams to prepare for. It helped me stay focused and productive, and I hope it can help others too.",
     techStack: [
       { name: "Tech 1", icon: "/nextjs.png" },
       { name: "Tech 2", icon: "/typescript.webp" },
@@ -73,4 +97,5 @@ export const projectsData = [
     githubLink: "https://github.com/baovylee/portfolio",
     appLink: "https://portfolio-vy-le.vercel.app/",
   }
+  
 ];
